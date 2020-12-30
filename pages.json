@@ -1,0 +1,75 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-ui基础项目"
+			}
+		}
+	    ,{
+            "path" : "pages/home/home",
+            "style" : {
+				"navigationBarTitleText": "货运江湖"
+			}
+        }
+        ,{
+            "path" : "pages/source/source",
+            "style" : {
+				"navigationBarTitleText": "货源"
+			}
+        }
+        ,{
+            "path" : "pages/order/order",
+            "style" : {
+				"navigationBarTitleText": "运单"
+			}
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" : {
+				"navigationBarTitleText": "我的"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "货运江湖",
+		"navigationBarBackgroundColor": "#008BF8",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"selectedColor": "#008BF8",
+		"color": "#333333",
+		"list": [{
+				"text": "首页",
+				"pagePath": "pages/home/home",
+				"iconPath": "static/icon/home_bottom_first_unlight.png",
+				"selectedIconPath": "static/icon/home_bottom_first.png"
+			},
+			{
+				"text": "货源",
+				"pagePath": "pages/source/source",
+				"iconPath": "static/icon/home_bottom_source_unlight.png",
+				"selectedIconPath": "static/icon/home_bottom_source_light.png"
+			},
+			{
+				"text": "运单",
+				"pagePath": "pages/order/order",
+				"iconPath": "static/icon/home_bottom_order_unlight.png",
+				"selectedIconPath": "static/icon/home_bottom_order_light.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/user/user",
+				"iconPath": "static/icon/home_bottom_mine_unlight.png",
+				"selectedIconPath": "static/icon/home_bottom_mine_light.png"
+			}
+		]
+	}
+}
