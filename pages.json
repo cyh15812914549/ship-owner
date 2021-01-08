@@ -1,6 +1,13 @@
 {
 	"pages": [
 		{
+		    "path" : "pages/source/publish-source",
+		    "style" : {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "发布货源"
+			}
+		},
+		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "登录"
@@ -34,6 +41,19 @@
             "path" : "pages/user/user",
             "style" : {
 				"navigationBarTitleText": "我的"
+			}
+        }
+        ,{
+            "path" : "pages/source/select-model",
+            "style" : {
+				"navigationBarTitleText": "选择结算模式"
+			}
+        }
+        
+        ,{
+            "path" : "pages/addressManage/select-address",
+            "style" : {
+				"navigationBarTitleText": "选择地址"
 			}
         }
     ],

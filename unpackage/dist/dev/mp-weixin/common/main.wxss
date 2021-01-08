@@ -14,6 +14,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/*每个页面公共css */
 @font-face {
 	font-family: uniicons;
@@ -1523,7 +1537,7 @@ radio-group label, checkbox-group label{
 	white-space: nowrap;
 }
 .page_bg{
-	background-color: #F4F5F6;
+	background-color:  #e5e5e5;
 }
 .col_fd52 {
 	color: #FD521D;
@@ -1534,6 +1548,9 @@ radio-group label, checkbox-group label{
 .font-size32 {
 	font-size: 32rpx;
 }
+.font-size36 {
+	font-size: 36rpx;
+}
 .align-middle {
 	vertical-align: middle
 }
@@ -1541,14 +1558,37 @@ radio-group label, checkbox-group label{
 	width: 320rpx;
 	height: 320rpx;
 }
+.text-l {
+	text-align: left;
+}
 .text-r {
 	text-align: right;
+}
+.text-c {
+	text-align: center;
 }
 .pos_relative {
 	position: relative
 }
 .pos_absolute {
 	position: absolute;
+}
+.fixed_bottom{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 120rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	z-index: 1;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	background-color: #e5e5e5;
+}
+.fixed_bottom_mb140{
+	margin-bottom: 140rpx;
 }
 .col_E51818 {
 	color: #E51818;
@@ -1665,7 +1705,7 @@ radio-group label, checkbox-group label{
 .top-area {
 	position: fixed;
 	top: 0;
-	z-index: 9999;
+	z-index: 9;
 	width: 100%;
 }
 .uni-display-flex {
@@ -1682,6 +1722,11 @@ radio-group label, checkbox-group label{
 	-webkit-box-flex: 2;
 	-webkit-flex: 2;
 	        flex: 2;
+}
+.uni-flex3 {
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	        flex: 3;
 }
 .uni-width-100P {
 	width: 100%;
@@ -1906,6 +1951,9 @@ radio-group label, checkbox-group label{
 }
 .icon-shouji:before {
   content: "\e692";
+}
+page{
+		background-color: #e5e5e5;
 }
 	/* 解决头条小程序组件内引入字体不生效的问题 */
 

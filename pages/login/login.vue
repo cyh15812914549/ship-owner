@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<!-- <view class="uni-padding-wrap uni-common-mt">
+		<view class="uni-padding-wrap uni-common-mt">
 			<view class="image-wrapper uni-center-cr">
 				<image class="image" mode="widthFix" src="@/static/images/hdd_main_logo.png" />
 			</view>
@@ -46,17 +46,7 @@
 				<text @click="forgetPass">忘记密码?</text>
 			</view>
 			
-		</view> -->
-		
-		<view style="position: relative;height: 200rpx;width: 200rpx;background-color: #576B95;">
-			<view style="margin-top: 80rpx;background-color: #008BF8;">452154</view>
-			<view style="background-color: #09BB07;position: absolute;top: 50%;
-      transform: translateY(-50%);right: 5%;">
-				测试一下
-			</view>
 		</view>
-		
-		
 	</view>
 </template>
 
@@ -86,21 +76,6 @@
 			}
 		},
 		onLoad(options) {
-			const shape = {
-			  radius: 10,
-			  diameter() {
-			    return this.radius * 2
-			  },
-			  perimeter: () => 2 * Math.PI * this.radius,
-			  perimeter2() {
-				  const func = () => 2 * Math.PI * this.radius
-				  return func()
-			  },
-			}
-		
-			// console.log(shape.diameter.call(shape))
-			
-			
 			
 		},
 		onShow() {
@@ -233,6 +208,10 @@
 </script>
 
 <style lang="scss">
+	
+	page{
+		background-color: $uni-bg-color;
+	}
 	
 	.uni-padding-wrap{
 		width:630rpx;
