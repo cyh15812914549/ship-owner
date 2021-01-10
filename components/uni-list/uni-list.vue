@@ -1,6 +1,6 @@
 <template>
 	<!-- #ifndef APP-NVUE -->
-	<view class="uni-list uni-border-top-bottom" :class="{'border-radius15': radius}">
+	<view :class="{'border-radius15': radius}">
 		<view v-if="border" class="uni-list--border-top"></view>
 		<slot />
 		<view v-if="border" class="uni-list--border-bottom"></view>
@@ -36,11 +36,11 @@ export default {
 		},
 		border: {
 			type: Boolean,
-			default: true
+			default: false
 		},
 		radius: {
 			type: Boolean,
-			default: true
+			default: false
 		}
 	},
 	// provide() {

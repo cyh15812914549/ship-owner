@@ -23,7 +23,8 @@
 			<view>
 				<view class="margin20">
 					<uni-list :radius="true">
-						<uni-list-item title="始发地" :required="true" rightText="请选择" :show-arrow="true" link to="/pages/addressManage/select-address"
+						<uni-list-item title="始发地" :required="true" rightText="请选择" 
+						:show-arrow="true" link to="/pages/addressManage/select-address"
 						 thumb="../../static/images/goods_destination_ic.png">
 						</uni-list-item>
 						<uni-list-item title="始发地吃水深度" :show-arrow="false" thumb="../../static/images/goods_draft_at_sisccharge_ic.png">
@@ -119,7 +120,7 @@
 		</view>
 
 		<view class="fixed_bottom">
-			<button class="uni-bg-main-color uni-width-90P">下一步</button>
+			<button class="uni-bg-main-color uni-width-70P border-radius100">下一步</button>
 		</view>
 	</view>
 </template>

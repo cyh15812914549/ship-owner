@@ -1,6 +1,12 @@
 {
 	"pages": [
 		{
+		    "path" : "pages/addressManage/select-address",
+		    "style" : {
+				"navigationBarTitleText": "选择地址"
+			}
+		},
+		{
 		    "path" : "pages/source/publish-source",
 		    "style" : {
 				"navigationStyle": "custom",
@@ -50,11 +56,15 @@
 			}
         }
         
+        
         ,{
-            "path" : "pages/addressManage/select-address",
-            "style" : {
-				"navigationBarTitleText": "选择地址"
-			}
+            "path" : "pages/addressManage/add-address",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新增地址",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {

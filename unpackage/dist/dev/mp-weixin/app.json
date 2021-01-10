@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/addressManage/select-address",
     "pages/source/publish-source",
     "pages/login/login",
     "pages/index/index",
@@ -8,7 +9,7 @@
     "pages/order/order",
     "pages/user/user",
     "pages/source/select-model",
-    "pages/addressManage/select-address"
+    "pages/addressManage/add-address"
   ],
   "subPackages": [],
   "window": {

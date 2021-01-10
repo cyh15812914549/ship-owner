@@ -4,11 +4,12 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true
+    "urlCheck": true,
+    "es6": true
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "touristappid",
+  "appid": "wx4332ad753e47070f",
   "projectname": "ship-owner",
   "condition": {
     "search": {
