@@ -24,6 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.look-boat {
+  width: 110rpx;
+  height: 110rpx;
+}
 .address-one {
   font-size: 36rpx;
   font-weight: bold;
@@ -37,9 +41,5 @@
   height: 90rpx;
   width: 90rpx;
   line-height: 90rpx;
-}
-.look-boat {
-  width: 110rpx;
-  height: 110rpx;
 }
 

@@ -4,8 +4,10 @@
 			<text class="uni-dialog-title-text" :class="['uni-popup__'+dialogType]">{{title}}</text>
 		</view>
 		<view class="uni-dialog-content">
-			<text class="uni-dialog-content-text" v-if="mode === 'base'">{{content}}</text>
-			<input v-else class="uni-dialog-input" v-model="val" type="text" :placeholder="placeholder" :focus="focus" >
+			<slot name="body">
+				<text class="uni-dialog-content-text" v-if="mode === 'base'">{{content}}</text>
+				<input v-else class="uni-dialog-input" v-model="val" type="text" :placeholder="placeholder" :focus="focus" >
+			</slot>
 		</view>
 		<view class="uni-dialog-button-group">
 			<view class="uni-dialog-button" @click="close">
@@ -110,7 +112,8 @@
 		},
 		created() {
 			// 对话框遮罩不可点击
-			this.popup.mkclick = false
+			// this.popup.mkclick = false
+			this.popup.mkclick = true
 			if (this.mode === 'input') {
 				this.dialogType = 'info'
 				this.val = this.value
@@ -162,6 +165,9 @@
 		justify-content: center;
 		padding-top: 15px;
 		padding-bottom: 5px;
+		border-bottom-color: #f5f5f5;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
 	}
 
 	.uni-dialog-title-text {

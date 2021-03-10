@@ -1,1 +1,1 @@
-<view class="{{[(radius)?'border-radius15':'']}}"><block wx:if="{{border}}"><view class="uni-list--border-top"></view></block><slot></slot><block wx:if="{{border}}"><view class="uni-list--border-bottom"></view></block></view>
+<view class="{{[[(radius)?'border-radius15':''],'uni-bg-white']}}"><block wx:if="{{border}}"><view class="uni-list--border-top"></view></block><slot></slot><block wx:if="{{border}}"><view class="uni-list--border-bottom"></view></block></view>

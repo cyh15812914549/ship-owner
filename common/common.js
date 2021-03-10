@@ -18,7 +18,7 @@ export const getTotalPage = (total,pageSize) => {
 }
 
 // 延迟2s后返回上一页
-export const goBack = () => {
+export const goBackTwoSec = () => {
   setTimeout(() => {
     uni.navigateBack({
       delta: 1
@@ -26,15 +26,22 @@ export const goBack = () => {
   }, 2000)
 }
 
+export const goBack = () => {
+  setTimeout(() => {
+    uni.navigateBack({
+      delta: 1
+    })
+  })
+}
 
 //  showModal提示
 export const WXShowModal = (data, cb, cb1) => {
   uni.showModal({
-    title: data.title || '提示!',
+    title: data.title === 'null' ? '' : data.title || '提示!',
     content: data.content,
+	showCancel: data.showCancel,
     cancelText: data.cancelText || '取消',
-    cancelColor: app.globalData.mainColor,
-    confirmColor: app.globalData.mainColor,
+    confirmColor: getApp().globalData.mainColor,
     confirmText: data.confirmText || '确定',
     success(res) {
       if (res.confirm) {

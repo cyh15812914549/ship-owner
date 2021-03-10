@@ -3,7 +3,8 @@ const state = {
   phoneNumber: '',
   password: '',
   roleNum: '',
-  totalTopHeight: ''
+  totalTopHeight: '',
+  statusBarHeight: ''
 }
 
 
@@ -15,10 +16,8 @@ const mutations = {
 	  state.roleNum = data.roleNum
   },
   getCustomHeight(state,data){
-  	state.statusBar = data.statusBar
-  	state.customBar = data.customBar
+  	state.statusBarHeight = data.statusBarHeight
 	state.totalTopHeight = data.totalTopHeight
-  	console.log(data,"data")
   }
 }
 

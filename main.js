@@ -8,10 +8,12 @@ Vue.config.productionTip = false
 
 App.mpType = 'app'
 
-Vue.prototype.MOMENT = moment
+Vue.prototype.$moment = moment
+
 
 const app = new Vue({
 	...App,
 	store
 })
 app.$mount()
+

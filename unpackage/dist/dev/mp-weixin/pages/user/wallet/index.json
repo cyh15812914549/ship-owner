@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的钱包",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#010101",
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons",
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-list-item": "/components/uni-list-item/uni-list-item",
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

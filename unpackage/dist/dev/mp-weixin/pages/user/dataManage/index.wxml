@@ -1,0 +1,1 @@
+<view><view class="uni-common-mt30"><uni-list vue-id="b1792bce-1" bind:__l="__l" vue-slots="{{['default']}}"><uni-list-item vue-id="{{('b1792bce-2')+','+('b1792bce-1')}}" title="常用地址管理" showArrow="true" clickable="true" data-event-opts="{{[['^click',[['goAddressList']]]]}}" bind:click="__e" bind:__l="__l"></uni-list-item></uni-list></view></view>

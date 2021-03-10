@@ -1,15 +1,29 @@
 {
   "pages": [
-    "pages/addressManage/select-address",
+    "pages/user/user",
+    "pages/user/integral/integral-detailed",
+    "pages/user/integral/index",
+    "pages/user/wallet/index",
+    "pages/source/source",
     "pages/source/publish-source",
+    "pages/source/publish-source-next",
+    "pages/source/goods-type",
+    "pages/addressManage/select-address",
+    "pages/addressManage/add-address",
+    "pages/addressManage/address-map",
     "pages/login/login",
     "pages/index/index",
     "pages/home/home",
-    "pages/source/source",
     "pages/order/order",
-    "pages/user/user",
     "pages/source/select-model",
-    "pages/addressManage/add-address"
+    "pages/source/preview-source",
+    "pages/user/enterprise-qrcode",
+    "pages/user/wallet/trade-record",
+    "pages/user/message/index",
+    "pages/user/message/message-detail",
+    "pages/user/dataManage/index",
+    "pages/user/relationShipowner/index",
+    "pages/user/relationShipowner/shipowner-info"
   ],
   "subPackages": [],
   "window": {
@@ -48,5 +62,11 @@
       }
     ]
   },
-  "usingComponents": {}
+  "permission": {
+    "scope.userLocation": {
+      "desc": "选择位置时使用"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap33.json"
 }

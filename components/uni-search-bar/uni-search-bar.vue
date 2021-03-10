@@ -1,5 +1,5 @@
 <template>
-	<view class="uni-searchbar" :style="{backgroundColor: footBgColor}" >
+	<view class="uni-searchbar">
 		<view :style="{borderRadius:radius+'px',backgroundColor: bgColor}" class="uni-searchbar__box" @click="searchClick">
 			<!-- #ifdef MP-ALIPAY -->
 			<view class="uni-searchbar__box-icon-search">
@@ -55,10 +55,6 @@
 			maxlength: {
 				type: [Number, String],
 				default: 100
-			},
-			footBgColor: {
-				type: String,
-				default: "#e5e5e5"
 			}
 		},
 		data() {
@@ -127,7 +123,8 @@
 		/* #endif */
 		flex-direction: row;
 		position: relative;
-		padding: $uni-spacing-col-base;
+		// padding: $uni-spacing-col-base;
+		// background-color: $uni-bg-color;
 	}
 
 	.uni-searchbar__box {

@@ -25,7 +25,7 @@
 						<text>{{ sourceItem.sourceName }}</text>
 						<text class="uni-mrl10">|</text>
 						<text v-if="sourceItem.isTon == 1" class="col_188FEA">余{{ sourceItem.surplusAmout || sourceItem.surplusAmount }}</text>
-						<text v-else-if="sourceItem.isTon != 1" class="col_188FEA">{{ sourceItem.amount }}</text>
+						<text v-else-if="sourceItem.isTon != 1" class="col_188FEA">{{ sourceItem.size + sourceItem.unit }}</text>
 						<text class="uni-mrl10">|</text>
 						<text>{{sourceItem.loadingDate == '' ? sourceItem.loadingDate : sourceItem.loadingDate | formatDateMDZW}}</text>
 						<text v-if="sourceItem.toleranceDays && sourceItem.toleranceDays != 0">+{{ sourceItem.toleranceDays }}天</text>
@@ -36,12 +36,13 @@
 					<view class="uni-flex">
 						<view class="uni-flex-item ">
 							<view>
-								<text>散货船</text>
+								<text>{{sourceItem.shipType}}</text>
 								<text class="uni-mrl10">|</text>
-								<text>1000~1100吨</text>
+								<text>{{sourceItem.minTonnage}}~{{sourceItem.maxTonnage}}吨</text>
 							</view>
 							<view class="col_E51818">
-								<block v-if="sourceItem.freightType == 1">
+								<text>{{ sourceItem.price }}/{{ sourceItem.unit }}</text>
+								<!-- <block v-if="sourceItem.freightType == 1">
 									<text v-if="sourceItem.phoneContact == 1">电议</text>
 									<block v-if="sourceItem.phoneContact != 1">
 										<text>{{ sourceItem.price }}{{ sourceItem.isMonthly == '1' ? '积分' : '元' }}/{{ sourceItem.unit }}</text>
@@ -53,10 +54,10 @@
 								</block>
 								<block>
 									<text class="uni-common-ml20" v-if="sourceItem.isPreparePay == 1"> 可预付</text>
-								</block>
+								</block> -->
 							</view>
 							<view>
-								<text>发布人：省永超 {{formatPublish}} 公开</text>
+								<text>发布人：{{sourceItem.publisher}} {{formatPublish}} 公开</text>
 							</view>
 						</view>
 						
@@ -99,11 +100,11 @@
 			};
 		},
 		created() {
-			moment.locale('zh-cn');
+			this.$moment.locale('zh-cn');
 		},
 		computed:{
 			formatPublish: function(){
-				return this.moment(this.publishTime).format('YYYY/MM/DD HH:mm')
+				return this.$moment(this.sourceItem.publishTime).format('YYYY/MM/DD HH:mm')
 			} 
 		},
 		methods:{
@@ -115,6 +116,11 @@
 </script>
 
 <style lang="scss">
+	.look-boat{
+		width: 110rpx;
+		height: 110rpx;
+	}
+	
 	.address-one {
 	  font-size: 36rpx;
 	  font-weight: bold;
@@ -132,8 +138,5 @@
 		line-height: 90rpx;
 	}
 	
-	.look-boat{
-		width: 110rpx;
-		height: 110rpx;
-	}
+	
 </style>

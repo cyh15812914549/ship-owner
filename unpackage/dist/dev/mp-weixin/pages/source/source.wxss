@@ -36,7 +36,7 @@
   z-index: 10;
 }
 .safe-range {
-  padding-top: 76rpx;
+  padding-top: 84rpx;
 }
 .publish {
   position: fixed;

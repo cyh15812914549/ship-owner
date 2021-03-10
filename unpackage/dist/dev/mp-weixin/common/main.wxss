@@ -1551,6 +1551,12 @@ radio-group label, checkbox-group label{
 .font-size36 {
 	font-size: 36rpx;
 }
+.font-size40 {
+	font-size: 40rpx;
+}
+.font-size46 {
+	font-size: 46rpx;
+}
 .align-middle {
 	vertical-align: middle
 }
@@ -1573,6 +1579,9 @@ radio-group label, checkbox-group label{
 .pos_absolute {
 	position: absolute;
 }
+.col-999{
+	color: #999;
+}
 .fixed_bottom{
 	position: fixed;
 	bottom: 0;
@@ -1581,10 +1590,13 @@ radio-group label, checkbox-group label{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	z-index: 1;
+	z-index: 5;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
 	background-color: #e5e5e5;
 }
 .fixed_bottom_mb140{
@@ -1621,6 +1633,9 @@ radio-group label, checkbox-group label{
 .border_bottom {
 	border-bottom: 1px solid #d9d9d9;
 }
+.uni-border{
+	border: 1px solid #e5e5e5;
+}
 .global-button {
 	border-radius: 100px;
 	background-color: #008BF8;
@@ -1651,6 +1666,12 @@ radio-group label, checkbox-group label{
 .icon60 {
 	width: 60rpx;
 	height: 60rpx;
+}
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
 }
 .uni-inline {
 	display: inline;
@@ -1799,6 +1820,12 @@ radio-group label, checkbox-group label{
 .uni-common-ml30 {
 	margin-left: 30rpx;
 }
+.uni-common-ml40 {
+	margin-left: 40rpx;
+}
+.uni-common-ml50 {
+	margin-left: 50rpx;
+}
 .uni-common-mt20 {
 	margin-top: 20rpx;
 }
@@ -1916,6 +1943,9 @@ radio-group label, checkbox-group label{
 .padding30 {
 	padding: 30rpx;
 }
+.padding40 {
+	padding: 40rpx;
+}
 .margin10 {
 	margin: 10rpx;
 }
@@ -1924,6 +1954,9 @@ radio-group label, checkbox-group label{
 }
 .margin30 {
 	margin: 30rpx;
+}
+.margin40 {
+	margin: 40rpx;
 }
 .bottom-b {
 	position: fixed;

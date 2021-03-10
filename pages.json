@@ -1,9 +1,44 @@
 {
 	"pages": [
 		{
-		    "path" : "pages/addressManage/select-address",
+		    "path" : "pages/user/user",
 		    "style" : {
-				"navigationBarTitleText": "选择地址"
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+		    "path" : "pages/user/integral/integral-detailed",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "积分明细",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/user/integral/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的积分",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#010101"
+		    }  
+		},
+		{
+		    "path" : "pages/user/wallet/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的钱包",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#010101"
+		    }  
+		},
+		
+		{
+		    "path" : "pages/source/source",
+		    "style" : {
+				"navigationBarTitleText": "货源"
 			}
 		},
 		{
@@ -13,6 +48,48 @@
 				"navigationBarTitleText": "发布货源"
 			}
 		},
+		{
+		    "path" : "pages/source/publish-source-next",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "发布货源",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		
+		{
+		    "path" : "pages/source/goods-type",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "货物类型",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/addressManage/select-address",
+		    "style" : {
+				"navigationBarTitleText": "选择地址"
+			}
+		},
+		
+		{
+		    "path" : "pages/addressManage/add-address",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "新增地址",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		{
+		    "path" : "pages/addressManage/address-map",
+		    "style" : {
+				"navigationBarTitleText": "新增地址",
+				"usingComponents": {}
+			}
+		},
+		
+		
 		{
 			"path": "pages/login/login",
 			"style": {
@@ -31,37 +108,88 @@
 				"navigationBarTitleText": "货运江湖"
 			}
         }
-        ,{
-            "path" : "pages/source/source",
-            "style" : {
-				"navigationBarTitleText": "货源"
-			}
-        }
+        
         ,{
             "path" : "pages/order/order",
             "style" : {
 				"navigationBarTitleText": "运单"
 			}
         }
-        ,{
-            "path" : "pages/user/user",
-            "style" : {
-				"navigationBarTitleText": "我的"
-			}
-        }
+        
         ,{
             "path" : "pages/source/select-model",
             "style" : {
 				"navigationBarTitleText": "选择结算模式"
 			}
         }
-        
-        
         ,{
-            "path" : "pages/addressManage/add-address",
+            "path" : "pages/source/preview-source",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "新增地址",
+                "navigationBarTitleText": "预览货源",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/enterprise-qrcode",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业二维码",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/wallet/trade-record",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "交易记录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/message/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "消息中心",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/user/message/message-detail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "消息详情",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/user/dataManage/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "资料管理",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/relationShipowner/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "已关联船东",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/relationShipowner/shipowner-info",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "船东信息", 
                 "enablePullDownRefresh": false
             }
             

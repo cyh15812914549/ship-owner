@@ -24,6 +24,24 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.block {
+  margin: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+.freightRate-input {
+  display: inline-block;
+  width: calc(100% - 110rpx);
+  vertical-align: middle;
+}
+.freightRate-text {
+  width: 60rpx;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
 .picker-view {
   width: 750rpx;
   height: 520rpx;
@@ -60,5 +78,12 @@
           justify-content: space-around;
   height: 80rpx;
   line-height: 80rpx;
+}
+.input {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 15rpx;
+  border: 2rpx solid #e5e5e5;
+  border-radius: 15rpx;
 }
 

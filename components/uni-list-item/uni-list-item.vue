@@ -4,14 +4,14 @@
 		<!-- #endif -->
 
 		<view
-			:class="{ 'uni-list-item--disabled': disabled }"
+			:class="{ 'uni-list-item--disabled': disabled, 'uni-list-item__container_borBot':ifDisplayBorBot }"
 			:hover-class="(!clickable && !link) || disabled || showSwitch ? '' : 'uni-list-item--hover'"
 			class="uni-list-item"
 			@click.stop="onClick"
 		>
 			<view v-if="!isFirstChild" class="border--left" :class="{ 'uni-list--border': border }"></view>
 			<view class="uni-list-item__container" 
-				:class="{ 'container--right': showArrow || link, 'flex--direction': direction === 'column','uni-list-item__container_borBot':ifDisplayBorBot }">
+				:class="{ 'container--right': showArrow || link, 'flex--direction': direction === 'column' }">
 				<slot name="header">
 					<view class="uni-list-item__header">
 						<view v-if="thumb" class="uni-list-item__icon"><image :src="thumb" class="uni-list-item__icon-img" :class="['uni-list--' + thumbSize]" /></view>
@@ -20,13 +20,19 @@
 				</slot>
 				<slot name="body">
 					<view class="uni-list-item__content" :class="{ 'uni-list-item__content--center': thumb || showExtraIcon || showBadge || showSwitch }">
-						<text v-if="title" class="uni-list-item__content-title" :class="[ellipsis !== 0 && ellipsis <= 2 ? 'uni-ellipsis-' + ellipsis : '']">{{ title }}</text>
+						<view v-if="title" class="uni-list-item__content-title" 
+							:class="[ellipsis !== 0 && ellipsis <= 2 ? 'uni-ellipsis-' + ellipsis : '']">{{ title }}
+							<text v-if="required" style="color: #FF0000;margin-top: 12rpx;margin-left: 8rpx;">*</text>
+							<slot name="content"></slot>
+						</view>
+						
 						<text v-if="note" class="uni-list-item__content-note">{{ note }}</text>
 					</view>
 				</slot>
 				<slot name="footer">
 					<view v-if="rightText || showBadge || showSwitch" class="uni-list-item__extra" :class="{ 'flex--justify': direction === 'column' }">
-						<text v-if="rightText" class="uni-list-item__extra-text">{{ rightText }}</text>
+						<!-- :class="{'uni-list-item__extra-text': !notSetColor}" -->
+						<text v-if="rightText" :style="{color: rightTextColor}">{{ rightText }}</text>
 						<uni-badge v-if="showBadge" :type="badgeType" :text="badgeText" />
 						<switch v-if="showSwitch" :disabled="disabled" :color="mainColor" :checked="switchChecked" @change="onSwitchChange" />
 					</view>
@@ -57,6 +63,7 @@ import uniBadge from '../uni-badge/uni-badge.vue';
  * @property {String} 	badgeText						数字角标内容
  * @property {String} 	badgeType 						数字角标类型，参考[uni-icons](https://ext.dcloud.net.cn/plugin?id=21)
  * @property {String} 	rightText 						右侧文字内容
+ * * @property {String} 	notSetColor 			    不设置右侧文字颜色
  * @property {Boolean} 	disabled = [true|false]			是否禁用
  * @property {Boolean} 	clickable = [true|false] 		是否开启点击反馈
  * @property {String} 	link = [navigateTo|redirectTo|reLaunch|switchTab] 是否展示右侧箭头并开启点击反馈
@@ -143,6 +150,10 @@ export default {
 			type: String,
 			default: ''
 		},
+		rightTextColor: {
+			type: String,
+			default: '#999'
+		},
 		thumb: {
 			type: String,
 			default: ''
@@ -167,9 +178,13 @@ export default {
 		},
 		border: {
 			type: Boolean,
-			default: true
+			default: false
 		},
 		ifDisplayBorBot:{
+			type: Boolean,
+			default: false
+		},
+		required: {
 			type: Boolean,
 			default: false
 		},
@@ -256,7 +271,7 @@ $list-item-pd: $uni-spacing-col-lg $uni-spacing-row-lg;
 	font-size: $uni-font-size-lg;
 	position: relative;
 	justify-content: space-between;
-	background-color: #fff;
+	// background-color: #fff;
 	flex-direction: row;
 }
 

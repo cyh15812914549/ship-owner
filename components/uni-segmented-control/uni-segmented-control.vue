@@ -77,7 +77,7 @@
 		box-sizing: border-box;
 		/* #endif */
 		flex-direction: row;
-		height: 36px;
+		height: 84rpx;
 		overflow: hidden;
 	}
 

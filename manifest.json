@@ -46,6 +46,11 @@
         "setting" : {
             "urlCheck" : true,
             "es6" : true
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "选择位置时使用"
+            }
         }
     }
 }

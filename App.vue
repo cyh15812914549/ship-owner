@@ -5,11 +5,11 @@ export default {
 		// 自定义statusBar,customBar
 		uni.getSystemInfo({
 			success: (e) => {
-				
+				let statusBarHeight = uni.getSystemInfoSync().statusBarHeight
 				let totalTopHeight = uni.getSystemInfoSync().statusBarHeight + 44
 				
 				this.$store.commit('getCustomHeight', {
-					totalTopHeight
+					totalTopHeight,statusBarHeight
 				})
 			}
 		})

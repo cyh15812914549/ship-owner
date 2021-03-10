@@ -24,6 +24,14 @@
 	font-size: 36rpx;
 }
 
+.font-size40 {
+	font-size: 40rpx;
+}
+
+.font-size46 {
+	font-size: 46rpx;
+}
+
 .align-middle {
 	vertical-align: middle
 }
@@ -53,14 +61,19 @@
 	position: absolute;
 }
 
+.col-999{
+	color: #999;
+}
+
 .fixed_bottom{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	height: 120rpx;
 	display: flex;
-	z-index: 1;
+	z-index: 5;
 	align-items: center;
+	justify-content: center;
 	background-color: #e5e5e5;
 }
 
@@ -105,6 +118,10 @@
 	border-bottom: 1px solid #d9d9d9;
 }
 
+.uni-border{
+	border: 1px solid #e5e5e5;
+}
+
 .global-button {
 	border-radius: 100px;
 	background-color: #008BF8;
@@ -142,6 +159,14 @@
 .icon60 {
 	width: 60rpx;
 	height: 60rpx;
+}
+
+.float-left{
+	float: left;
+}
+
+.float-right{
+	float: right;
 }
 
 .uni-inline {
@@ -313,6 +338,14 @@
 	margin-left: 30rpx;
 }
 
+.uni-common-ml40 {
+	margin-left: 40rpx;
+}
+
+.uni-common-ml50 {
+	margin-left: 50rpx;
+}
+
 .uni-common-mt20 {
 	margin-top: 20rpx;
 }
@@ -391,6 +424,8 @@
 	padding-bottom: 30rpx;
 }
 
+
+
 .uni-common-pl30 {
 	padding-left: 30rpx;
 }
@@ -465,6 +500,10 @@
 	padding: 30rpx;
 }
 
+.padding40 {
+	padding: 40rpx;
+}
+
 .margin10 {
 	margin: 10rpx;
 }
@@ -475,6 +514,10 @@
 
 .margin30 {
 	margin: 30rpx;
+}
+
+.margin40 {
+	margin: 40rpx;
 }
 
 .bottom-b {

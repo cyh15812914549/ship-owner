@@ -58,7 +58,7 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
           flex-direction: row;
-  height: 36px;
+  height: 84rpx;
   overflow: hidden;
 }
 .segmented-control__item.data-v-a00bd3e0 {

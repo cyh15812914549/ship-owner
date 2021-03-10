@@ -1,13 +1,16 @@
 <template>
 	<!-- #ifndef APP-NVUE -->
-	<view :class="{'border-radius15': radius}">
+	<view :class="[{'border-radius15': radius},'uni-bg-white']">
 		<view v-if="border" class="uni-list--border-top"></view>
 		<slot />
 		<view v-if="border" class="uni-list--border-bottom"></view>
 	</view>
 	<!-- #endif -->
 	<!-- #ifdef APP-NVUE -->
-	<list class="uni-list" :class="{ 'uni-list--border': border,'border-radius15': radius }" :enableBackToTop="enableBackToTop" loadmoreoffset="15"><slot /></list>
+	<list class="uni-list" :class="{ 'uni-list--border': border,'border-radius15': radius }" 
+		:enableBackToTop="enableBackToTop" loadmoreoffset="15">
+		<slot />
+	</list>
 	<!-- #endif -->
 </template>
 
